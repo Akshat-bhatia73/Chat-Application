@@ -1,0 +1,391 @@
+:root {
+  --GrayishGreen: #202c33;
+  --TealGreen: #0a574e;
+  // --TealDarkGreen: #075E54;
+  --TealDarkGreen: #111b21;
+}
+.error {
+  color: red;
+}
+
+//Forms for login and register page
+.formContainer {
+  background-color: var(--TealDarkGreen);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .formWrapper {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 20px 60px;
+    border-radius: 10px;
+
+    .logoDiv {
+      display: flex;
+      align-items: center;
+      color: var(--TealGreen);
+
+      .logo {
+        font-size: 24px;
+        font-weight: bolder;
+      }
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--TealDarkGreen);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 10px;
+        border: none;
+        width: 250px;
+        border-bottom: 1px solid var(--TealDarkGreen);
+        outline: none;
+      }
+
+      .upload {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      button {
+        background-color: var(--TealGreen);
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--TealDarkGreen);
+        }
+      }
+    }
+
+    p {
+      padding: 10px;
+      color: var(--TealDarkGreen);
+    }
+  }
+}
+
+//Home Page 
+.home {
+  .container {
+    height: 100vh;
+    display: flex;
+    color: white;
+
+    .sidebar {
+      flex: 1;
+      background-color: var(--TealDarkGreen);
+      border-right: 1px solid rgb(104, 104, 104);
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        width: 0.35vw;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--GrayishGreen);
+        border-radius: 0;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+        margin-block: 2px;
+      }
+
+      .navbar {
+        display: flex;
+        background-color: var(--GrayishGreen);
+        height: 60px;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+
+        .logoDiv {
+          display: flex;
+          align-items: center;
+
+          .logo {
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            background-color: #fff;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .userName {
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+
+        button {
+          color: var(--TealDarkGreen);
+        }
+      }
+
+      .searchBar {
+        margin-bottom: 10px;
+        .searchForm {
+          padding: 10px 10px 0;
+          .input {
+            width: 100%;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            input {
+              border-radius: 0px !important;
+              padding: 8px;
+              border: none;
+              background-color: var(--GrayishGreen);
+              color: white;
+              outline: none;
+
+              &::placeholder {
+                color: lightgray;
+              }
+            }
+
+            .search {
+              font-size: 15px;
+              color: lightgray;
+            }
+          }
+        }
+        .userChat {
+          background-color: var(--GrayishGreen);
+
+          &:hover {
+            background-color: var(--TealGreen);
+          }
+        }
+      }
+
+      .userChat {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(130, 130, 130);
+
+        &:hover {
+          background-color: var(--GrayishGreen);
+        }
+
+        img {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          border: 1px solid rgb(130, 130, 130);
+          object-fit: cover;
+        }
+
+        .userChatInfo {
+          .user {
+            font-size: 18px;
+            font-weight: 500;
+          }
+          .recentMessage {
+            font-size: 14px;
+            color: lightgray;
+          }
+        }
+      }
+    }
+    .chatBox {
+      flex: 2;
+      background-image: linear-gradient(#111b2190, #0a10146d),
+        url("../img/wallpaper.png");
+      background-size: contain;
+      background-blend-mode: overlay;
+      .chatInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        height: 60px;
+        background-color: var(--GrayishGreen);
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          img {
+            background-color: #fff;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            border: 1px solid rgb(130, 130, 130);
+            object-fit: cover;
+          }
+
+          .userName {
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
+
+        .chatIcons {
+          display: flex;
+          gap: 20px;
+
+          i {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .messages {
+        padding: 10px;
+        height: calc(100% - 135px);
+        overflow: scroll;
+        &::-webkit-scrollbar {
+          width: 0.75vw;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--GrayishGreen);
+          border-radius: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+          margin-block: 2px;
+        }
+
+        .message {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 20px;
+
+          .messageInfo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-direction: column;
+
+            img {
+              background-color: #fff;
+              height: 20px;
+              width: 20px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            .time {
+              font-size: 10px;
+              color: #f5efef82;
+            }
+          }
+
+          .messageContent {
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p {
+              padding: 10px 20px;
+              background-color: var(--GrayishGreen);
+              color: white;
+              border-radius: 0 10px 10px;
+              max-width: max-content;
+            }
+
+            img {
+              width: 50%;
+            }
+          }
+
+          &.owner {
+            flex-direction: row-reverse;
+
+            .messageContent {
+              align-items: flex-end;
+
+              p {
+                background-color: var(--TealGreen);
+                border-radius: 10px 0 10px 10px;
+              }
+            }
+          }
+        }
+      }
+
+      .messageBox {
+        background-color: var(--GrayishGreen);
+        color: white;
+        height: 75px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+          padding: 15px;
+          width: 70%;
+          border-radius: 8px;
+          border: none;
+          outline: none;
+          background-color: #303d44;
+          color: white;
+
+          &::placeholder {
+            color: lightgray;
+          }
+        }
+        .send {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          * {
+            cursor: pointer;
+          }
+          .file {
+            color: #e0e1e2;
+          }
+
+          label {
+            .paperclip {
+              color: #e0e1e2;
+            }
+          }
+
+          button {
+            color: var(--TealDarkGreen);
+          }
+        }
+      }
+    }
+  }
+}
