@@ -1,6 +1,0 @@
-  apiKey: "AIzaSyAbxyXHCrMsnNcG5o_RurcWn-08YVqvhGo",
-  authDomain: "messenger-fa04f.firebaseapp.com",
-  projectId: "messenger-fa04f",
-  storageBucket: "messenger-fa04f.appspot.com",
-  messagingSenderId: "734095786628",
-  appId: "1:734095786628:web:0e0de991d8b25d8f77f8d1",
